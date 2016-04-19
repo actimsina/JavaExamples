@@ -1,18 +1,16 @@
 # Relationships between classes
 
 There are 2 types of relationships:
-- Inheritance
-> It can be called as Generalization / Specialization etc.
-- Association
-    * Composition 
+- Inheritance: It can be called as generalization, or specialization.
+
+- Association: It can be further categorized into 
+    * Composition, and 
     * Aggregation
-> Associations can be further categorized into two groups
- composition, and aggregation
-> Composition is more stronger type of association
-> Aggregation is more flexible type of association
 
-For example Composition:
+## Composition
+It is more stronger type of association. Symbolized with colored diamond box.
 
+For example:
 ```java
     class Car {
         private Engine e1;
@@ -27,8 +25,10 @@ For example Composition:
     }
 ```
 
-For example Aggregation:
-Dependency Injection
+## Aggregation 
+It is more flexible type of association. Symbolized with white diamond box.
+
+For example:
 ```java
     class Car {
         private Engine e1;
@@ -43,3 +43,7 @@ Dependency Injection
         }        
     }
 ```
+
+The dependencies between classes are more explicit, which makes unit testing easier.
+
+Both of these associations can be generalized using directed arrow head.
